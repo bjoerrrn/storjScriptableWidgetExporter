@@ -1,21 +1,16 @@
-# StorjWidget-Exporter
+# StorjScriptableWidgetExporter
 
-<img src="https://github.com/striker43/storjWidget-exporter/blob/main/widget.png?raw=true" alt="0x187C8C43890fe4C91aFabbC62128D383A90548Dd" hight=340 width=340 align="right"/> 
+![stars](https://img.shields.io/github/stars/dusselmann/storjScriptableWidgetExporter) ![last_commit](https://img.shields.io/github/last-commit/dusselmann/storjScriptableWidgetExporter)
 
-StorjWidget-Exporter starts a python Flask server which pulls information from storj node api for `node`, `satellite` and `payout` metrics and aggregates the data. The endpoint is returning the total `ingress` and `egress` over all nodes, the `estimated daily earnings` and the `current months earnings`, `total space used` and `total space available`, `total number of queried nodes` and `online count of queried nodes`.
+<img src="https://github.com/dusselmann/storjScriptableWidget/blob/main/screenshot.jpeg?raw=true" alt="" width=340 align="right"/> 
+
+This is a fork of [StorjWidgetExporter](https://github.com/striker43/storjWidget-Exporter) with minor modifications. 
+
+StorjScriptableWidgetExporter starts a python Flask server which pulls information from [storj node](https://www.storj.io/node) api for `node`, `satellite` and `payout` metrics and aggregates the data. The endpoint is returning the total `ingress` and `egress` over all nodes, the `estimated daily earnings` and the `current months earnings`, `total space used` and `total space available`, `total number of queried nodes` and `online count of queried nodes`.
 
 The Exporter's endpoint will be available at http://localhost:3123/bandwidth
 
-Tested with storj node version `1.16.1`
-
-## Support
-Feel free to raise issues if you find them and also raise a pull request if you'd like to contribute.
-
-If you wish to support my work, please find my eth/storj wallet address below or scan the qr code:
-
-`0x80E88Ac925B259faedeD7d05c99BfA934952084a`
-
-<img src="wallet_qr.png" alt="0x187C8C43890fe4C91aFabbC62128D383A90548Dd" hight=100 width=100/> 
+Tested with storj node version `1.52.2`
 
 ## Usage
 
@@ -46,5 +41,12 @@ Clone this repo and cd, then
     docker run -p 3123:3123 -e NODES_LIST=192.168.188.59:14002,myNodesIp.com:14002 -v storjWidgetVolume:/var/www/storjWidgetVolume storjwidget 
 
 ## Next Steps:
-When your storjWidget-Exporter is up and running and returning stats of your node(s) at http://localhost:3123/bandwidth, you can continue and set up your [storjWidget](https://github.com/striker43/storjWidget).
+When your storjWidget-Exporter is up, running and returning stats of your node(s) at http://localhost:3123/bandwidth, you can continue and set up your [storjScriptableWidget](https://github.com/dusselmann/storjScriptableWidget).
 
+## contributing
+
+[issues](https://github.com/dusselmann/storjScriptableWidgetExporter/issues) and [pull requests](https://github.com/dusselmann/storjScriptableWidgetExporter/pulls) are welcome. for major changes, please open an [issue](https://github.com/dusselmann/storjScriptableWidgetExporter/issues) first to discuss what you would like to change.
+
+## license
+
+[Apache-2.0](https://github.com/dusselmann/storjScriptableWidget/blob/main/LICENSE)
