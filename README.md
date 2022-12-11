@@ -4,7 +4,7 @@
 
 <img src="https://github.com/dusselmann/storjScriptableWidget/blob/main/screenshot.jpeg?raw=true" alt="" width=340 align="right"/> 
 
-This is a fork of [StorjWidgetExporter](https://github.com/striker43/storjWidget-Exporter) with minor modifications: it just adds trash disk space to the disk space calculation to show a more accurate available space.
+This is a fork of [StorjWidgetExporter](https://github.com/striker43/storjWidget-Exporter) with minor modifications: it just adds trash disk space to the disk space calculation to show a more accurate space used.
 
 StorjScriptableWidgetExporter starts a python Flask server which pulls information from storj node api for `node`, `satellite` and `payout` metrics and aggregates the data. The endpoint is returning the total `ingress` and `egress` over all nodes, the `estimated daily earnings` and the `current months earnings`, `total space used` and `total space available`, `total number of queried nodes` and `online count of queried nodes`.
 
