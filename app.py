@@ -72,6 +72,7 @@ def getPayoutEstimationToday(data):
 
 def getSpaceInfo(snoResponse, data):
   data['spaceUsed'] += snoResponse['diskSpace']['used']/1000000000000
+  data['spaceTrash'] += snoResponse['diskSpace']['trash']/1000000000000
   data['spaceAvailable'] += snoResponse['diskSpace']['available']/1000000000000
   return data
 
@@ -91,6 +92,7 @@ def update_data():
   data['estimatedPayoutTotal'] = 0.0
   data['estimatedPayoutToday'] = 0.0
   data['spaceUsed'] = 0.0
+  data['spaceTrash'] = 0.0
   data['spaceAvailable'] = 0.0
   data['totalNodesCount'] = len(nodes)
   data['nodesOnline'] = len(nodes)
@@ -112,7 +114,7 @@ def update_data():
 
   data['estimatedPayoutTotal'] = float("{:.2f}".format(data['estimatedPayoutTotal']/100))
   data['estimatedPayoutToday'] = float("{:.2f}".format(data['estimatedPayoutToday']/100))
-  data['spaceUsed'] = float("{:.2f}".format(data['spaceUsed']))
+  data['spaceUsed'] = float("{:.2f}".format(data['spaceUsed']+data['spaceTrash']))
   data['spaceAvailable'] = float("{:.2f}".format(data['spaceAvailable']))
 
   addUnits(data)
