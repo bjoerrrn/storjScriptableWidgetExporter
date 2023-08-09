@@ -14,7 +14,7 @@ StorjScriptableWidgetExporter starts a python Flask server which pulls informati
 
 The Exporter's endpoint will be available at http://localhost:3123/bandwidth
 
-Tested with storj node version `1.67.3`
+Tested with storj node version `1.84.1`
 
 ## Usage
 
